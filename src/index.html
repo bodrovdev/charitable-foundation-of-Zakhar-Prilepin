@@ -1,7 +1,41 @@
 @@include('components/_base/_base-header.html')
 
 <main class="page-content">
-	<section class="heading"></section>
+	<section class="index-heading" id="index-heading">
+		<div class="index-heading__container base-container">
+			<div class="index-heading__info">
+				<h1 class="index-heading__title base-title">
+					Благотворительный<br class="index-heading__desktop-break"> фонд <span class="index-heading__title index-heading__title--red">Захара Прилепина</span>
+				</h1>
+				<p class="index-heading__subtitle base-par">
+					<span class="index-heading__subtitle index-heading__subtitle--white">Учредитель:</span> Захар Прилепин совместно с
+					волонтёрами при огромной поддержке граждан
+					России оказывает гуманитарную помощь населению,
+					оказавшемуся в тяжелой жизненной ситуации
+				</p>
+				@@include('components/_bem/_donate-button.html')
+			</div>
+
+			<figure class="index-heading__cover-image base-figure">
+				<img class="index-heading__cover-img" src="img/image/index-heading-cover-img.png" width="594" height="619" alt="#">
+			</figure>
+
+			<div class="index-heading__motto">
+				<p class="index-heading__motto-text base-par">
+					"Знаете ценность свою? Она равна количеству людей, которые жить не могут без вашей заботы"
+				</p>
+				<svg class="index-heading__icon" width="95" height="65" alt="#">
+					<use href="img/icon/sprite.svg#quotes-icon"></use>
+				</svg>
+			</div>
+
+			<div class="index-heading__sms">
+				<p class="index-heading__sms-text base-par">
+					Отправьте SMS на номер 3434 с текстом ЗАХАР пробел СУММА. Пример: «ЗАХАР 100», «ЗАХАР 1000»
+				</p>
+			</div>
+		</div>
+	</section>
 </main>
 
 @@include('components/_base/_base-footer.html')

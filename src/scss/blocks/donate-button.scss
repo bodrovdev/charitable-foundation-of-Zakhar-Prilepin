@@ -1,0 +1,89 @@
+@use "../mixins";
+
+.donate-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 266px;
+  height: 61px;
+  background-color: var(--color-valencia);
+
+  padding: 6px;
+
+  &__graphic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    background-color: var(--color-white);
+
+    @include mixins.respond-to(desktopD) {
+      margin: 0 40px 0 0
+    }
+  }
+
+  &__text {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    color: var(--color-white)
+  }
+
+  @include mixins.respond-to(mobileOnly) {
+    background-color: var(--color-white);
+
+    &__graphic-container {
+      background-color: var(--color-valencia);
+    }
+
+    &__graphic-icon {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(0%) hue-rotate(194deg) brightness(103%) contrast(104%);
+    }
+
+    &__text {
+      color: var(--color-valencia);
+    }
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    background-color: var(--color-white);
+
+    &__graphic-container {
+      background-color: var(--color-valencia);
+    }
+
+    &__graphic-icon {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(0%) hue-rotate(194deg) brightness(103%) contrast(104%);
+    }
+
+    &__text {
+      color: var(--color-valencia);
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1279px) {
+  .donate-button {
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    &__graphic-container {
+      background-color: var(--color-valencia);
+    }
+
+    &__graphic-icon {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(0%) hue-rotate(194deg) brightness(103%) contrast(104%);
+    }
+
+    &__text {
+      display: none
+    }
+  }
+}

@@ -20,7 +20,7 @@ burger.addEventListener('click', () => {
 })
 
 // - Закрытие по клику на пункт меню
-nav_list.onclick = function(event) {
+nav_list.onclick = function (event) {
   let target = event.target;
 
   if (target.tagName != 'a') return;
@@ -33,13 +33,14 @@ nav_list.onclick = function(event) {
   }
 };
 
-// nav_links.forEach((element) => {
-//   element.addEventListener('click', () => {
-//     burger.classList.toggle('main-nav__burger--active');
-//     mobile_menu.classList.toggle('main-nav__nav-menu--mobile--active');
+//Определение высоты первого блока
+const setHeight = () => {
+  document.getElementById("index-heading").style.minHeight = window.innerHeight + "px";
+};
 
-//     if (mobile_menu.classList.contains('main-nav__nav-menu--mobile--active')) {
-//       enableBodyScroll(mobile_menu);
-//     }
-//   })
-// })
+let deviceWidth = window.matchMedia("(max-width: 1024px)");
+
+if (deviceWidth.matches) {
+  window.addEventListener("resize", setHeight);
+  setHeight();
+}
