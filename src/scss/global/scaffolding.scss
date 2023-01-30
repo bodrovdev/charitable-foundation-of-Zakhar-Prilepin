@@ -1,0 +1,22 @@
+@use "../mixins";
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
+	scrollbar-gutter: stable;
+}
+
+*,:after,:before {
+	box-sizing: inherit;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+}
