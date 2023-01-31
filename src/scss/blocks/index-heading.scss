@@ -2,7 +2,8 @@
 
 .index-heading {
   position: relative;
-  top: 116px;
+
+  margin: 116px 0 0 0;
 
   background-color: var(--color-mine-shaft);
   overflow-x: hidden;
@@ -142,8 +143,6 @@
   &__subtitle {
     display: inline-block;
 
-    max-width: 630px;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -175,69 +174,13 @@
         margin: 0
       }
     }
-  }
-
-  &__desktop-break {
-    @include mixins.respond-to(mobileOnly) {
-      display: none;
-    }
-
-    @include mixins.respond-to(tablet) {
-      display: none;
-    }
-
-    @include mixins.respond-to(desktopM) {
-      display: inline-block;
-    }
-  }
-
-  &__cover-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    display: inline-block;
-
-    width: fit-content;
-    height: fit-content;
-
-    z-index: 1;
-
-    @include mixins.respond-to(mobileOnly) {
-      display: none
-    }
-
-    @include mixins.respond-to(tabletOnly) {
-      display: none
-    }
-  }
-
-  &__cover-img {
-    display: block;
 
     @include mixins.respond-to(desktopS) {
-      width: 320px;
-      height: auto;
-    }
-  }
-
-  &__motto {
-    position: absolute;
-    right: 0;
-    bottom: 180px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    z-index: 2;
-
-    @include mixins.respond-to(mobileOnly) {
-      display: none
+      max-width: 500px;
     }
 
-    @include mixins.respond-to(tabletOnly) {
-      display: none
+    @include mixins.respond-to(desktopD) {
+      max-width: 630px;
     }
   }
 
@@ -286,14 +229,120 @@
     }
   }
 
+  &__desktop-break {
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+    }
+
+    @include mixins.respond-to(tablet) {
+      display: none;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      display: inline-block;
+    }
+  }
+
+  &__cover-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: inline-block;
+
+    width: fit-content;
+    height: fit-content;
+
+    z-index: 1;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: none
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: none
+    }
+  }
+
+  &__cover-img {
+    display: block;
+    height: auto;
+
+    @include mixins.respond-to(desktopS) {
+      width: 320px;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      width: 350px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      width: 594px;
+    }
+  }
+
+  &__motto {
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: none
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: none
+    }
+
+    @include mixins.respond-to(desktopS) {
+      bottom: 90px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      bottom: 180px;
+    }
+  }
+
   &__motto-text {
     display: inline-block;
-    max-width: 390px;
 
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
     color: var(--color-white);
+
+    @include mixins.respond-to(desktopS) {
+      max-width: 230px;
+
+      font-size: 16px;
+    }
+
+    @include mixins.respond-to(desktopS) {
+      max-width: 350px;
+
+      font-size: 18px;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      max-width: 390px;
+    }
+  }
+
+  &__icon {
+    @include mixins.respond-to(desktopS) {
+      width: 50px;
+      height: auto;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      width: 95px;
+      height: 65px;
+    }
   }
 
   &__sms {

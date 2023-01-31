@@ -1,0 +1,246 @@
+@use "../mixins";
+
+.index-about {
+  overflow: hidden;
+
+  margin: 50px 0 0 0;
+
+  @include mixins.respond-to(desktopM) {
+    margin: 100px 0 0 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: stretch;
+
+    overflow: hidden;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column
+    }
+
+    @include mixins.respond-to(tablet) {
+      flex-direction: column
+    }
+
+    @include mixins.respond-to(desktopM) {
+      flex-direction: row;
+
+      max-width: calc(100% - ((100% - var(--container-width)) / 2));
+
+      margin: 0 auto 0 0
+    }
+  }
+
+  &__graphic {
+    display: flex;
+
+    width: 90%;
+
+    margin: 0 auto 50px auto;
+
+    @include mixins.respond-to(desktopM) {
+      width: auto;
+
+      margin: 0 24px 0 0
+    }
+  }
+
+  &__graphic-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 0 0 24px
+  }
+
+  &__graphic-image {
+    display: inline-block;
+
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__graphic-img {
+    display: block;
+
+    object-fit: cover;
+    vertical-align: top;
+  }
+
+  &__graphic-image--big {
+
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+    }
+
+    @include mixins.respond-to(tablet) {
+      & img {
+        width: 100%;
+        height: 434px;
+      }
+    }
+
+    @include mixins.respond-to(desktopM) {
+      & img {
+        width: 618px;
+        height: 434px;
+      }
+    }
+  }
+
+  &__graphic-image--small {
+    @include mixins.respond-to(mobileOnly) {
+      & img {
+        width: 100%;
+        height: auto
+      }
+    }
+  }
+
+  &__thesis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 140px;
+    height: 140px;
+    background: var(--color-valencia);
+
+    &-num {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 44px;
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    &-text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 23px;
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 90%;
+
+      margin: 0 auto
+    }
+
+    @include mixins.respond-to(tablet) {
+      width: 90%;
+
+      margin: 0 auto
+    }
+
+    @include mixins.respond-to(desktopM) {
+      width: 100%
+    }
+  }
+
+  &__desc-column {
+    display: flex;
+
+    margin: 60px 0 0 0
+  }
+
+  &__desc-item {
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 20px 0;
+
+      &:last-child {
+        margin: 0
+      }
+    }
+  }
+
+  &__desc-item--left {
+    margin: 0 30px 0 0
+  }
+
+  &__desc-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__label-text {
+    position: relative;
+
+    display: inline-block;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 35px;
+    color: var(--color-valencia);
+
+    padding: 0 100px 0 0;
+    margin: 0 15px 0 0;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 86px;
+      height: 2px;
+      background-color: var(--color-valencia);
+
+      transform: translateY(-100%);
+    }
+  }
+
+  &__item-title {
+    font-family: var(--font-family-title);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 41px;
+    color: var(--color-mine-shaft);
+
+    margin: 0 0 15px 0
+  }
+
+  &__item-img {
+    margin: 0 0 5px 0
+  }
+
+  &__item-text {
+    display: inline-block;
+
+    max-width: 500px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  &__desc-item--left .index-about__item-text {
+    max-width: 300px
+  }
+
+  &__desc-item--right .index-about__item-text {
+    max-width: 300px
+  }
+}
