@@ -36,7 +36,7 @@
     min-height: 50px;
     background-color: var(--color-white);
 
-    @include mixins.respond-to(desktopD) {
+    @include mixins.respond-to(desktopS) {
       margin: 0 40px 0 0
     }
   }
@@ -89,7 +89,7 @@
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1279px) {
-  .donate-button {
+  .main-nav__container .donate-button {
     justify-content: center;
 
     width: 50px;
@@ -97,6 +97,8 @@
 
     &__graphic-container {
       background-color: var(--color-valencia);
+
+      margin: 0
     }
 
     &__graphic-icon {

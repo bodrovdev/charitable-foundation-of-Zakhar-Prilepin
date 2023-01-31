@@ -16,7 +16,7 @@
     padding: 40px 0 0 0
   }
 
-  @include mixins.respond-to(desktopM) {
+  @include mixins.respond-to(desktopS) {
     height: 650px
   }
 
@@ -46,32 +46,22 @@
 
     z-index: 2;
 
-    &--red {
-      color: var(--color-valencia);
-
-      margin: 0
+    & span {
+      color: var(--color-valencia)
     }
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 33px;
       line-height: 34px;
 
-      margin: 0 0 16px 0;
-
-      &--red {
-        margin: 0
-      }
+      margin: 0 0 16px 0
     }
 
     @include mixins.respond-to(tabletOnly) {
       font-size: 33px;
       line-height: 34px;
 
-      margin: 0 0 16px 0;
-
-      &--red {
-        margin: 0
-      }
+      margin: 0 0 16px 0
     }
 
     @include mixins.respond-to(desktopS) {
@@ -80,11 +70,7 @@
       font-size: 50px;
       line-height: 60px;
 
-      margin: 50px 0 30px 0;
-
-      &--red {
-        margin: 0
-      }
+      margin: 50px 0 30px 0
     }
 
     @include mixins.respond-to(desktopM) {
@@ -93,50 +79,28 @@
       font-size: 70px;
       line-height: 71px;
 
-      margin: 130px 0 30px 0;
-
-      &--red {
-        margin: 0
-      }
+      margin: 130px 0 30px 0
     }
   }
 
   @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
     &__title {
       font-size: 27px;
-      line-height: 34px;
-
-      &--red {
-        font-size: 30px;
-
-        margin: 0
-      }
+      line-height: 34px
     }
   }
 
   @media only screen and (min-device-width: 375px) and (max-device-width: 1023px) {
     &__title {
       font-size: 33px;
-      line-height: 34px;
-
-      &--red {
-        font-size: 33px;
-
-        margin: 0
-      }
+      line-height: 34px
     }
   }
 
   @include mixins.respond-to(tabletOnly) {
     &__title {
       font-size: 33px;
-      line-height: 34px;
-
-      &--red {
-        font-size: 33px;
-
-        margin: 0
-      }
+      line-height: 34px
     }
   }
 
@@ -152,27 +116,17 @@
 
     z-index: 2;
 
-    &--white {
+    & span {
       font-weight: 700;
-      color: var(--color-white);
-
-      margin: 0
+      color: var(--color-white)
     }
 
     @include mixins.respond-to(mobileOnly) {
       margin: 0 0 30px 0;
-
-      &--white {
-        margin: 0
-      }
     }
 
     @include mixins.respond-to(tabletOnly) {
       margin: 0 0 30px 0;
-
-      &--white {
-        margin: 0
-      }
     }
 
     @include mixins.respond-to(desktopS) {
@@ -208,10 +162,9 @@
     }
 
     @include mixins.respond-to(tabletOnly) {
-      width: 100%;
       background-color: var(--color-valencia);
 
-      margin: 0 auto 40px auto;
+      margin: 0 0 40px 0;
 
       &__graphic-container {
         background-color: var(--color-white);
@@ -269,11 +222,7 @@
     height: auto;
 
     @include mixins.respond-to(desktopS) {
-      width: 320px;
-    }
-
-    @include mixins.respond-to(desktopD) {
-      width: 350px;
+      width: 500px;
     }
 
     @include mixins.respond-to(desktopM) {
@@ -300,7 +249,7 @@
     }
 
     @include mixins.respond-to(desktopS) {
-      bottom: 90px;
+      bottom: 190px;
     }
 
     @include mixins.respond-to(desktopM) {
