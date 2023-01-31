@@ -34,13 +34,13 @@ nav_list.onclick = function (event) {
 };
 
 //Определение высоты первого блока
-const setHeight = () => {
-  document.getElementById("index-heading").style.minHeight = window.innerHeight + "px";
-};
+// const setHeight = () => {
+//   document.getElementById("index_heading").style.minHeight = window.innerHeight + "px";
+// };
 
-let deviceWidth = window.matchMedia("(max-width: 1024px)");
+// let deviceWidth = window.matchMedia("(max-width: 1024px)");
 
-if (deviceWidth.matches) {
-  window.addEventListener("resize", setHeight);
-  setHeight();
-}
+// if (deviceWidth.matches) {
+//   window.addEventListener("resize", setHeight);
+//   setHeight();
+// }
