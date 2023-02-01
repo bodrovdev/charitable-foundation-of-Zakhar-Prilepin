@@ -39,5 +39,8 @@
     "sass": "^1.45.0",
     "swiper": "^8.4.6",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "glightbox": "^3.2.0"
   }
 }
