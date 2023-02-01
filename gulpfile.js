@@ -105,6 +105,7 @@ exports.build = series(
 	refreshFont,
 	minStyle,
 	minJs,
+	refreshImg,
 	// minImg,
 	// imgToWebp,
 	minSvg,

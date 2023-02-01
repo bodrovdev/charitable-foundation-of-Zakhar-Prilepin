@@ -1,0 +1,9 @@
+@use "../mixins";
+
+.section-title {
+  font-family: var(--font-family-title);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 41px;
+  color: var(--color-mine-shaft);
+}
