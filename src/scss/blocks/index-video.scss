@@ -21,7 +21,10 @@
 }
 
 .index-video {
-  margin: 70px 0 0 0;
+  overflow: hidden;
+
+  padding: 0 0 15px 0;
+  margin: 70px 0 70px 0;
 
   &__container {
     display: flex;
@@ -39,11 +42,24 @@
   }
 
   &__video-wrapper {
+    position: relative;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-valencia);
+
+      z-index: -1;
+    }
 
     @include mixins.respond-to(mobileOnly) {
       min-height: 500px;
@@ -51,10 +67,20 @@
 
     @include mixins.respond-to(tablet) {
       min-height: 500px;
+
+      &::after {
+        right: -5px;
+        bottom: -5px;
+      }
     }
 
     @include mixins.respond-to(desktopM) {
       min-height: 732px;
+
+      &::after {
+        right: -15px;
+        bottom: -15px;
+      }
     }
   }
 
@@ -82,6 +108,11 @@
     animation-duration: 40s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 280px;
+      height: 280px;
+    }
   }
 
   &__circle--middle {
