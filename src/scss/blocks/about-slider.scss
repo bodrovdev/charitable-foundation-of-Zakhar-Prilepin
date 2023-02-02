@@ -1,0 +1,141 @@
+@use "../mixins";
+
+@keyframes right {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes left {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.about-slider {
+  display: flex;
+
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  &__title {
+    margin: 0 0 35px 0
+  }
+
+  &__slider-block {
+    max-width: 100%
+  }
+
+  &__video-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    @include mixins.respond-to(mobileOnly) {
+      min-height: 500px;
+    }
+
+    @include mixins.respond-to(tablet) {
+      min-height: 500px;
+
+      &::after {
+        right: -5px;
+        bottom: -5px;
+      }
+    }
+
+    @include mixins.respond-to(desktopM) {
+      min-height: 732px;
+
+      &::after {
+        right: -15px;
+        bottom: -15px;
+      }
+    }
+  }
+
+  &__circles {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover .about-slider__play-button {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+
+    z-index: 2
+  }
+
+  &__circle--big {
+    animation: right;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+  &__circle--middle {
+    animation: left;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &__circle--small {
+    animation: right;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &__play-button {
+    transition: transform 0.3s;
+  }
+
+  &__arrows-container {
+    position: absolute;
+    top: calc(50% + 41px);
+    left: 50%;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1465px;
+    pointer-events: none;
+
+    transform: translateX(-50%) translateY(-50%);
+
+    z-index: 5;
+  }
+
+  &__arrow {
+    pointer-events: all;
+  }
+}

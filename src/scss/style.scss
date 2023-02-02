@@ -1,6 +1,5 @@
 //Для разработки
 @use 'global/variables';
-@use 'node_modules/swiper/swiper-bundle.min.css';
 @use 'node_modules/glightbox/dist/css/glightbox.min.css';
 
 //Миксины
@@ -30,6 +29,10 @@
 @use 'blocks/index-about';
 @use 'blocks/section-title';
 @use 'blocks/index-report';
-@use 'blocks/index-video';@use 'blocks/footer-main';
+@use 'blocks/index-video';
+@use 'blocks/footer-main';
 @use 'blocks/footer-underline';
 @use 'blocks/heading';
+@use 'blocks/about-info';
+@use 'blocks/about-founder';
+@use 'blocks/about-slider';@use 'blocks/about-passport';

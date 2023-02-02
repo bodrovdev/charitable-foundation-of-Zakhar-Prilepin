@@ -37,7 +37,6 @@
     "postcss-preset-env": "^7.2.3",
     "require-dir": "^1.2.0",
     "sass": "^1.45.0",
-    "swiper": "^8.4.6",
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
