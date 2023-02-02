@@ -1,0 +1,57 @@
+@use "../mixins";
+
+.soviet {
+
+  &__title {
+    margin: 0 0 35px 0
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+
+    margin: 0 0 70px 0;
+
+    &:last-child {
+      margin: 0
+    }
+  }
+
+  &__item:nth-child(odd) {
+    & .soviet__item-image {
+      order: 1;
+
+      margin: 0 25px 0 0;
+    }
+
+    & .soviet__item-desc {
+      order: 2;
+    }
+  }
+
+  &__item:nth-child(even) {
+    justify-content: space-between;
+
+    & .soviet__item-image {
+      order: 2;
+    }
+
+    & .soviet__item-desc {
+      order: 1;
+    }
+  }
+
+  &__item-desc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__desc-text {
+    display: inline-block;
+    max-width: 520px;
+  }
+}

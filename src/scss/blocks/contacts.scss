@@ -1,0 +1,66 @@
+@use "../mixins";
+
+.contacts {
+  padding: 70px 0 70px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 25px 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 15px 0;
+  }
+
+  &__column-item {
+    margin: 0 0 25px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__column--right {
+    & p {
+      display: inline-block;
+      max-width: 400px;
+
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+
+      padding: 0;
+      margin: 0 0 25px 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0;
+    }
+
+    @include mixins.respond-to(desktopM) {
+      min-width: 640px;
+    }
+  }
+
+  &__column-item {
+    display: flex;
+    flex-direction: column
+  }
+}

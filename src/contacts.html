@@ -1,0 +1,48 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content">
+  @@include('components/_bem/_heading.html', {
+  "currentPage": "Контакты",
+  "title": "Контакты"
+  })
+
+  <section class="contacts">
+    <div class="contacts__container base-container">
+      <div class="contacts__column">
+        <h2 class="contacts__title section-title base-title">Контакты</h2>
+        <div class="contacts__column-item">
+          <span class="contacts__item-attribute contacts__item-attribute--name">Ершов Сергей Александрович</span>
+          <a class="contacts__item-attribute contacts__item-attribute--email base-link" href="mailto:fbesa17@gmail.com">fbesa17@gmail.com</a>
+          <a class="contacts__item-attribute contacts__item-attribute--phone base-link" href="tel:+7 (912) 444-70-44">+7 (912) 444-70-44</a>
+        </div>
+        <div class="contacts__column-item">
+          <span class="contacts__item-attribute contacts__item-attribute--name">Волчкова Светлана Анатольевна</span>
+          <a class="contacts__item-attribute contacts__item-attribute--email base-link" href="mailto:svetlana.volchkova1973@gmail.com">svetlana.volchkova1973@gmail.com</a>
+          <a class="contacts__item-attribute contacts__item-attribute--phone base-link" href="tel:"></a>
+        </div>
+      </div>
+      <div class="contacts__column contacts__column--right">
+        <h2 class="contacts__title section-title base-title">Реквизиты</h2>
+        <p>
+          Благотворительный фонд Захара Прилепина<br>
+          Юридический адрес:<br>
+          426039, Удмуртская Республика,
+          город Ижевск, улица Воткинское Шоссе, 138«б» - 81<br>
+          ОГРН 1171832011768<br>
+          ИНН 1840071016<br>
+          КПП 184001001
+        </p>
+        <p>
+          Расчетный счет № 40703810829020000035<br>
+          в ФИЛИАЛ "НИЖЕГОРОДСКИЙ" АО "АЛЬФА-БАНК"<br>
+          ИНН 7728168971<br>
+          БИК 042202824<br>
+          Корр. счет: 30101810200000000824 в ВОЛГО-ВЯТСКОЕ ГУ БАНКА РОССИИ
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include('components/_base/_base-footer.html')

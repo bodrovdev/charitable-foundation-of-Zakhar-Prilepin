@@ -36,6 +36,11 @@
       font-size: 18px;
       line-height: 18px;
       color: var(--color-white);
+
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 16px;
+      }
+
     }
   }
 
@@ -48,20 +53,29 @@
     line-height: 92px;
     color: var(--color-white);
 
-    @include mixins.respond-to(mobileOnly) {
-      font-size: 60px;
-      line-height: 60px;
-    }
-
     @include mixins.respond-to(tablet) {
       max-width: 420px;
 
       font-size: 60px;
-      line-height: 60px;
+      line-height: 60px
     }
 
     @include mixins.respond-to(desktopM) {
       max-width: inherit
+    }
+  }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    &__info-title {
+      font-size: 40px;
+      line-height: 40px
+    }
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 767px) {
+    &__info-title {
+      font-size: 50px;
+      line-height: 50px
     }
   }
 
