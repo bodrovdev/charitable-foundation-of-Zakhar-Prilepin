@@ -1,0 +1,56 @@
+@use "../mixins";
+
+.donation-main {
+  margin: 70px 0 70px 0;
+
+  &__banks-title {
+    margin: 0 0 35px 0;
+  }
+
+  &__banks-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+      grid-gap: 10px;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+
+  &__banks-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 305px;
+    height: 180px;
+
+    background-color: var(--color-bridal-heath);
+
+    margin: 0 25px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: auto;
+      height: auto;
+
+      margin: 0 0 25px 0
+    }
+  }
+
+  &__banks-img {
+    @include mixins.respond-to(mobileOnly) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+}

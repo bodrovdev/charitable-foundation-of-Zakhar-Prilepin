@@ -1,0 +1,43 @@
+@@include('components/_base/_base-header.html')
+
+<main class="page-content">
+  @@include('components/_bem/_heading.html', {
+  "currentPage": "Сделать пожертвование",
+  "title": "Сделать пожертвование"
+  })
+
+  <section class="donation-main">
+    <div class="donation-main__container base-container">
+      <div class="donation-main__bankss">
+        <h2 class="donation-main__banks-title section-title base-title">Мы принимаем</h2>
+        <div class="donation-main__banks-wrapper">
+          <div class="donation-main__banks-item">
+            <image class="donation-main__banks-image base-figure">
+              <img class="donation-main__banks-img" src="img/image/donation-bank-1.png" width="172" height="53" alt="#">
+            </image>
+          </div>
+          <div class="donation-main__banks-item">
+            <image class="donation-main__banks-image base-figure">
+              <img class="donation-main__banks-img" src="img/image/donation-bank-2.png" width="112" height="87" alt="#">
+            </image>
+          </div>
+          <div class="donation-main__banks-item">
+            <image class="donation-main__banks-image base-figure">
+              <img class="donation-main__banks-img" src="img/image/donation-bank-3.png" width="113" height="88" alt="#">
+            </image>
+          </div>
+          <div class="donation-main__banks-item">
+            <image class="donation-main__banks-image base-figure">
+              <img class="donation-main__banks-img" src="img/image/donation-bank-4.png" width="184" height="53" alt="#">
+            </image>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="donation-mobile"></section>
+
+</main>
+
+@@include('components/_base/_base-footer.html')
