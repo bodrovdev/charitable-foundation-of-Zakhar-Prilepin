@@ -1,3 +1,84 @@
 @use "../mixins";
 
-.donation-mobile {}
+.donation-mobile {
+  &__operators {
+    margin: 0 0 40px 0
+  }
+
+  &__operators-title {
+    margin: 0 0 35px 0;
+  }
+
+  &__operators-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+  }
+
+  &__operators-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 305px;
+    height: 180px;
+
+    background-color: var(--color-bridal-heath);
+
+    margin: 0 25px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+      min-height: 110px;
+      height: auto;
+
+      padding: 10px 0 10px 0;
+      margin: 0 0 25px 0
+    }
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1365px) {
+    &__operators-wrapper {
+      display: inline-grid;
+      grid-template: repeat(2, auto) / repeat(2, auto);
+      grid-gap: 25px;
+      grid-auto-flow: column;
+    }
+
+    &__operators-item {
+      margin: 0
+    }
+  }
+
+  &__operators-img {
+    @include mixins.respond-to(mobileOnly) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__operators-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 0 0 20px 0;
+  }
+
+  &__operators-link {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 63px;
+    text-decoration-line: underline;
+    color: var(--color-lochmara);
+  }
+}
