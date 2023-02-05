@@ -43,7 +43,7 @@
                 <a class="main-nav__nav-link base-link" href="contacts.html">Контакты</a>
               </li>
             </ul>
-            <a class="donate-button base-link" href="">
+            <a class="donate-button base-link" href="donation.html">
   <span class="donate-button__graphic-container">
     <svg class="donate-button__graphic-icon" width="26" height="22" alt="#">
       <use href="img/icon/sprite.svg#heart-icon"></use>
@@ -52,7 +52,7 @@
   <span class="donate-button__text">Пожертвовать</span>
 </a>
           </div>
-          <a class="donate-button base-link" href="">
+          <a class="donate-button base-link" href="donation.html">
   <span class="donate-button__graphic-container">
     <svg class="donate-button__graphic-icon" width="26" height="22" alt="#">
       <use href="img/icon/sprite.svg#heart-icon"></use>
@@ -86,7 +86,7 @@
 
   <section class="donation-main">
     <div class="donation-main__container base-container">
-      <div class="donation-main__bankss">
+      <div class="donation-main__banks">
         <h2 class="donation-main__banks-title section-title base-title">Мы принимаем</h2>
         <div class="donation-main__banks-wrapper">
           <div class="donation-main__banks-item">
@@ -111,10 +111,91 @@
           </div>
         </div>
       </div>
+      <ul class="donation-main__donation-list base-list">
+        <li class="donation-main__donation-item">
+          <span class="donation-main__donation-label">Сделать пожертвование на сумму</span>
+          <span class="donation-main__donation-value">100₽</span>
+          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+        </li>
+        <li class="donation-main__donation-item">
+          <span class="donation-main__donation-label">Сделать пожертвование на сумму</span>
+          <span class="donation-main__donation-value">500₽</span>
+          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+        </li>
+        <li class="donation-main__donation-item">
+          <span class="donation-main__donation-label">Сделать пожертвование на сумму</span>
+          <span class="donation-main__donation-value">1000₽</span>
+          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+        </li>
+        <li class="donation-main__donation-item">
+          <span class="donation-main__donation-label">Сделать пожертвование на сумму</span>
+          <span class="donation-main__donation-value">5000₽</span>
+          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+        </li>
+        <li class="donation-main__donation-item">
+          <label class="donation-main__donation-label" for="donation_input">Или укажите сумму пожертвования</label>
+          <input class="donation-main__donation-input" type="number" placeholder="100000000₽" id="donation_input" name="donation_input"></input>
+          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+        </li>
+      </ul>
+      <div class="donation-main__donation-underline">
+        <div class="donation-main__donation-info donation-main__donation-info--left base-par">
+          <p>
+            Вы можете: Внести пожертвование на сайте прямо сейчас, отправив любую сумму в SMS на номер 3434.
+            <span style="font-weight: 700; color: var(--color-valencia);">Требования оператора «Мегафон» и других операторов.</span> Комиссия с абонента – 0%.
+          </p>
+        </div>
+        <div class="donation-main__donation-info donation-main__donation-info--right base-par">
+          <p>Отправить SMS на номер <span style="font-weight: 700; color: var(--color-valencia);">3434</span>. Для того, чтобы сделать взнос,
+            нужно отправить сообщение на короткий номер <span style="font-weight: 700; color: var(--color-valencia);">3434</span>
+            со словом <span style="font-weight: 700; color: var(--color-valencia);">Захар</span> и через пробел указать сумму пожертвования цифрами.
+          </p>
+          <p>
+            Например: <span style="font-weight: 700; color: var(--color-valencia);">Захар 300</span> или <span style="font-weight: 700; color: var(--color-valencia);">Zahar300</span>.
+            Допустимый размер пожертвования — от 10 до 15 000 рублей.
+            Услуга доступна для абонентов МТС, Мегафон, Yota и Билайн.Спасибо!
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="donation-mobile"></section>
+  <section class="donation-mobile">
+    <div class="donation-mobile__container base-container">
+      <div class="donation-mobile__operators">
+        <h2 class="donation-mobile__operators-title section-title base-title">Операторы</h2>
+        <div class="donation-mobile__operators-wrapper">
+          <div class="donation-mobile__operators-item">
+            <image class="donation-mobile__operators-image base-figure">
+              <img class="donation-mobile__operators-img" src="img/image/donation-operator-1.svg" width="306" height="178" alt="#">
+            </image>
+          </div>
+          <div class="donation-mobile__operators-item">
+            <image class="donation-mobile__operators-image base-figure">
+              <img class="donation-mobile__operators-img" src="img/image/donation-operator-2.svg" width="306" height="178" alt="#">
+            </image>
+          </div>
+          <div class="donation-mobile__operators-item">
+            <image class="donation-mobile__operators-image base-figure">
+              <img class="donation-mobile__operators-img" src="img/image/donation-operator-3.svg" width="306" height="178" alt="#">
+            </image>
+          </div>
+          <div class="donation-mobile__operators-item">
+            <image class="donation-mobile__operators-image base-figure">
+              <img class="donation-mobile__operators-img" src="img/image/donation-operator-4.svg" width="306" height="178" alt="#">
+            </image>
+          </div>
+        </div>
+      </div>
+      <div class="donation-mobile__operators-links">
+        <a class="donation-mobile__operators-link base-link" href="#">Договор оферты МТС</a>
+        <a class="donation-mobile__operators-link base-link" href="#">Договор оферты Билайн</a>
+        <a class="donation-mobile__operators-link base-link" href="#">Договор оферты Yota</a>
+        <a class="donation-mobile__operators-link base-link" href="#">Договор оферты Тинькофф Мобайл</a>
+      </div>
+      <span class="donation-mobile__operators-caption">Ограничение по платежам 16+</span>
+    </div>
+  </section>
 
 </main>
 
@@ -128,24 +209,24 @@
         <div class="footer-main__nav-block">
           <ul class="footer-main__list footer-main__list--first base-list">
             <li class="footer-main__list-item">
-              <a class="footer-main__list-link base-link" href="#">О фонде</a>
+              <a class="footer-main__list-link base-link" href="about.html">О фонде</a>
             </li>
             <li class="footer-main__list-item">
-              <a class="footer-main__list-link base-link" href="#">Контакты</a>
+              <a class="footer-main__list-link base-link" href="contacts.html">Контакты</a>
             </li>
             <li class="footer-main__list-item">
-              <a class="footer-main__list-link base-link" href="#">Отчеты</a>
+              <a class="footer-main__list-link base-link" href="reports.html">Отчеты</a>
             </li>
           </ul>
           <ul class="footer-main__list footer-main__list--second base-list">
             <li class="footer-main__list-item">
-              <a class="footer-main__list-link base-link" href="#">Помочь фонду</a>
+              <a class="footer-main__list-link base-link" href="donation.html">Помочь фонду</a>
             </li>
             <li class="footer-main__list-item">
-              <a class="footer-main__list-link base-link" href="#">Бухгалтерская отчетность</a>
+              <a class="footer-main__list-link base-link" href="accounting.html">Бухгалтерская отчетность</a>
             </li>
             <li class="footer-main__list-item">
-              <a class="footer-main__list-link base-link" href="#">Попечительский совет</a>
+              <a class="footer-main__list-link base-link" href="soviet.html">Попечительский совет</a>
             </li>
           </ul>
           <a class="footer-main__tel base-link" href="tel:+7(000) 000 00 00">+7(000) 000 00 00</a>
