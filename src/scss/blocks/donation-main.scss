@@ -182,11 +182,20 @@
     width: 265px;
     height: 60px;
     background-color: var(--color-valencia);
+    cursor: pointer;
 
     font-weight: 900;
     font-size: 18px;
     line-height: 18px;
     color: var(--color-white);
+
+    transition: background-color 0.1s;
+
+    &:hover {
+      background-color: var(--color-flame-pea);
+
+      transition: background-color 0.1s;
+    }
   }
 
   &__donation-input {
