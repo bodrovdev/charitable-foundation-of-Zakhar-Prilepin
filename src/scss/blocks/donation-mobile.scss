@@ -1,6 +1,13 @@
 @use "../mixins";
 
 .donation-mobile {
+
+  padding: 0 0 70px 0;
+
+  @include mixins.respond-to(mobileOnly) {
+    padding: 0 0 35px 0;
+  }
+
   &__operators {
     margin: 0 0 40px 0
   }
@@ -80,5 +87,22 @@
     line-height: 63px;
     text-decoration-line: underline;
     color: var(--color-lochmara);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+      line-height: 45px;
+    }
+  }
+
+  &__operators-caption {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 41px;
+    color: var(--color-mine-shaft);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 }
