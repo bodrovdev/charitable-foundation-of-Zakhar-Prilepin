@@ -85,8 +85,16 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 63px;
-    text-decoration-line: underline;
+    text-decoration-line: none;
     color: var(--color-lochmara);
+
+    transition: color 0.1s;
+
+    &:hover {
+      color: var(--color-valencia);
+
+      transition: color 0.1s;
+    }
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 16px;

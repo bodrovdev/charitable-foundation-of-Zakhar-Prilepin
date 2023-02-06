@@ -70,10 +70,18 @@
     line-height: 26px;
     color: var(--color-lochmara);
 
+    transition: color 0.1s;
+
     margin: 0 0 20px 0;
 
     &:last-child {
       margin: 0
+    }
+
+    &:hover {
+      color: var(--color-valencia);
+
+      transition: color 0.1s;
     }
 
     @include mixins.respond-to(mobileOnly) {

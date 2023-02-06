@@ -140,6 +140,7 @@
             </a>
           </div>
         </div>
+        <div class="about-slider__pagination swiper-pagination"></div>
       </div>
 
       <script type="module">
@@ -153,6 +154,10 @@
           navigation: {
             nextEl: '.about-slider__arrow--next',
             prevEl: '.about-slider__arrow--prev',
+          },
+
+          pagination: {
+            el: '.about-slider__pagination',
           },
         });
       </script>
@@ -178,31 +183,43 @@
     <div class="about-passport__container base-container">
       <h2 class="about-passport__title section-title base-title">Паспорт фонда</h2>
       <div class="about-passport__link-wrapper">
-        <a class="about-passport__link-item base-link" href="#">
+        <div class="about-passport__link-item base-link" href="#">
           <span class="about-passport__link-num">1.</span>
           <p class="about-passport__link-text base-par">
             Учредителем и Президентом фонда является Захар Прилепин –
             русский писатель, публицист. С 2014 года - организатор сбора
             и доставки гуманитарной помощи жителям Донбасса.
           </p>
-        </a>
+        </div>
         <a class="about-passport__link-item base-link" href="#">
           <span class="about-passport__link-num">2.</span>
           <p class="about-passport__link-text base-par">
             Свидетельство о государственной регистрации
           </p>
+          <svg class="about-passport__link-icon" width="41" height="38" alt="#"
+            style="min-width:41px; min-height:38px; margin: 0 0 0 auto; filter: brightness(0) saturate(100%) invert(100%) sepia(26%) saturate(0%) hue-rotate(25deg) brightness(101%) contrast(101%);">
+            <use href="img/icon/sprite.svg#index-report-arrow"></use>
+          </svg>
         </a>
         <a class="about-passport__link-item base-link" href="#">
           <span class="about-passport__link-num">3.</span>
           <p class="about-passport__link-text base-par">
             Свидетельство о постановке на учет в налоговых органах
           </p>
+          <svg class="about-passport__link-icon" width="41" height="38" alt="#"
+            style="min-width:41px; min-height:38px; margin: 0 0 0 auto; filter: brightness(0) saturate(100%) invert(100%) sepia(26%) saturate(0%) hue-rotate(25deg) brightness(101%) contrast(101%);">
+            <use href="img/icon/sprite.svg#index-report-arrow"></use>
+          </svg>
         </a>
         <a class="about-passport__link-item base-link" href="#">
           <span class="about-passport__link-num">4.</span>
           <p class="about-passport__link-text base-par">
             Устав
           </p>
+          <svg class="about-passport__link-icon" width="41" height="38" alt="#"
+            style="min-width:41px; min-height:38px; margin: 0 0 0 auto; filter: brightness(0) saturate(100%) invert(100%) sepia(26%) saturate(0%) hue-rotate(25deg) brightness(101%) contrast(101%);">
+            <use href="img/icon/sprite.svg#index-report-arrow"></use>
+          </svg>
         </a>
       </div>
       <h3 class="about-passport__info-title base-title">Реквизиты</h3>

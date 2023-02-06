@@ -69,12 +69,13 @@
     display: inline-block;
 
     width: fit-content;
-    height: fit-content;
+    height: 100%;
   }
 
   &__graphic-img {
     display: block;
 
+    height: 100%;
     object-fit: cover;
     vertical-align: top;
   }
@@ -92,6 +93,8 @@
   }
 
   &__graphic-image--small {
+    margin: 0 0 25px 0;
+
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
 
@@ -109,8 +112,12 @@
     justify-content: center;
 
     width: 140px;
+    min-width: 140px;
     height: 140px;
+    min-height: 140px;
     background: var(--color-valencia);
+
+    margin: 0 0 10px 0;
 
     &-num {
       font-weight: 700;
