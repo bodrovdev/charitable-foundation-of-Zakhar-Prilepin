@@ -150,16 +150,25 @@
     z-index: 5;
 
     @include mixins.respond-to(mobileOnly) {
-      display: none;
+      display: none
     }
 
     @include mixins.respond-to(tablet) {
-      display: none;
+      display: none
     }
 
     @include mixins.respond-to(desktopM) {
-      display: flex;
+      display: flex
     }
+  }
+
+  &__arrow {
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+  & .swiper-button-disabled {
+    opacity: 0.3
   }
 
   &__pagination {
@@ -174,9 +183,5 @@
     @include mixins.respond-to(desktopM) {
       display: none;
     }
-  }
-
-  &__arrow {
-    pointer-events: all;
   }
 }

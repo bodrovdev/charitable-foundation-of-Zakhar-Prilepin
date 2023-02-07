@@ -120,6 +120,15 @@
     }
   }
 
+  &__arrow {
+    pointer-events: all;
+    cursor: pointer;
+  }
+
+  & .swiper-button-disabled {
+    opacity: 0.3
+  }
+
   &__pagination {
     @include mixins.respond-to(mobileOnly) {
       display: block;
@@ -132,10 +141,6 @@
     @include mixins.respond-to(desktopM) {
       display: none;
     }
-  }
-
-  &__arrow {
-    pointer-events: all;
   }
 
   &__tables {
