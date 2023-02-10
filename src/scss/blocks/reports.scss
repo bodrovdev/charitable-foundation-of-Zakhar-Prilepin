@@ -1,257 +1,257 @@
 @use "../mixins";
 
 .reports {
-  &__container {
-    padding: 70px 0 0 0;
-  }
+	&__container {
+		padding: 70px 0 0 0;
+	}
 
-  &__description-title {
-    margin: 0 0 15px 0
-  }
+	&__description-title {
+		margin: 0 0 15px 0;
+	}
 
-  &__description {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+	&__description {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
 
-    margin: 0 0 70px 0;
+		margin: 0 0 70px 0;
 
-    @include mixins.respond-to(mobileOnly) {
-      flex-direction: column
-    }
-  }
+		@include mixins.respond-to(mobileOnly) {
+			flex-direction: column;
+		}
+	}
 
-  &__description-text {
-    max-width: 640px
-  }
+	&__description-text {
+		max-width: 640px;
+	}
 
-  &__description-text--left {
-    margin: 0 30px 0 0;
+	&__description-text--left {
+		margin: 0 30px 0 0;
 
-    @include mixins.respond-to(mobileOnly) {
-      margin: 0 0 30px 0;
-    }
-  }
+		@include mixins.respond-to(mobileOnly) {
+			margin: 0 0 30px 0;
+		}
+	}
 
-  &__description-text p {
-    display: inline-block;
+	&__description-text p {
+		display: inline-block;
 
-    max-width: 640px;
+		max-width: 640px;
 
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-    color: var(--color-mine-shaft);
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 26px;
+		color: var(--color-mine-shaft);
 
-    padding: 0;
-    margin: 0
-  }
+		padding: 0;
+		margin: 0;
+	}
 
-  &__reports-title {
-    margin: 0 0 35px 0
-  }
+	&__reports-title {
+		margin: 0 0 35px 0;
+	}
 
-  &__wrapper {
-    margin: 0 0 70px 0;
+	&__wrapper {
+		margin: 0 0 70px 0;
 
-    @include mixins.respond-to(mobileOnly) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-    }
+		@include mixins.respond-to(mobileOnly) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+		}
 
-    @include mixins.respond-to(tablet) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+		@include mixins.respond-to(tablet) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
 
-    @include mixins.respond-to(desktopM) {
-      display: grid;
-      grid-template: repeat(3, auto) / repeat(3, auto);
-      grid-gap: 40px 25px;
-    }
-  }
+		@include mixins.respond-to(desktopM) {
+			display: grid;
+			grid-template: repeat(3, auto) / repeat(3, 1fr);
+			grid-gap: 40px 25px;
+		}
+	}
 
-  &__item {
-    display: flex;
-    flex-direction: column;
+	&__item {
+		display: flex;
+		flex-direction: column;
 
-    background-color: var(--color-valencia);
-    overflow: hidden;
+		background-color: var(--color-valencia);
+		overflow: hidden;
 
-    @include mixins.respond-to(mobileOnly) {
-      width: 100%;
-      height: 361px;
+		@include mixins.respond-to(mobileOnly) {
+			width: 100%;
+			height: 361px;
 
-      margin: 0 0 30px 0;
+			margin: 0 0 30px 0;
 
-      &:last-child {
-        margin: 0;
-      }
-    }
+			&:last-child {
+				margin: 0;
+			}
+		}
 
-    @include mixins.respond-to(tablet) {
-      display: flex;
-      flex-direction: column;
+		@include mixins.respond-to(tablet) {
+			display: flex;
+			flex-direction: column;
 
-      width: 416px;
-      height: 361px;
+			width: 416px;
+			height: 361px;
 
-      margin: 0 10px 30px 0
-    }
+			margin: 0 10px 30px 0;
+		}
 
-    @include mixins.respond-to(desktopM) {
-      margin: 0
-    }
+		@include mixins.respond-to(desktopM) {
+			margin: 0;
+		}
 
-    &:hover .reports__item-info {
-      transform: translateY(-20px);
+		&:hover .reports__item-info {
+			transform: translateY(-20px);
 
-      transition: transform 0.2s
-    }
-  }
+			transition: transform 0.2s;
+		}
+	}
 
-  &__item-image {
-    display: inline-block;
+	&__item-image {
+		display: inline-block;
 
-    width: 100%;
-    height: fit-content
-  }
+		width: 100%;
+		height: fit-content;
+	}
 
-  &__item-img {
-    display: block;
+	&__item-img {
+		display: block;
 
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    vertical-align: top;
-  }
+		width: 100%;
+		height: 280px;
+		object-fit: cover;
+		vertical-align: top;
+	}
 
-  &__item-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	&__item-info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    height: 100%;
-    max-height: 80px;
-    background-color: var(--color-valencia);
+		height: 100%;
+		max-height: 80px;
+		background-color: var(--color-valencia);
 
-    transition: transform 0.2s;
+		transition: transform 0.2s;
 
-    padding: 13px 5px 13px 5px;
-  }
+		padding: 13px 5px 13px 5px;
+	}
 
-  &__item-info p {
-    font-family: var(--font-family-title);
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    color: var(--color-white);
+	&__item-info p {
+		font-family: var(--font-family-title);
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28px;
+		text-align: center;
+		color: var(--color-white);
 
-    padding: 0;
-    margin: 0;
-  }
+		padding: 0;
+		margin: 0;
+	}
 
-  &__pagination {
-    width: fit-content;
+	&__pagination {
+		width: fit-content;
 
-    margin: 0 auto 70px auto;
+		margin: 0 auto 70px auto;
 
-    & .nav-links {
-      display: flex;
+		& .nav-links {
+			display: flex;
 
-      @include mixins.respond-to(mobileOnly) {
-        flex-direction: column;
-      }
-    }
+			@include mixins.respond-to(mobileOnly) {
+				flex-direction: column;
+			}
+		}
 
-    & .page-numbers {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+		& .page-numbers {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-      width: 50px;
-      height: 50px;
-      background-color: var(--color-white);
-      border: 1px solid var(--color-mine-shaft);
-      border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			background-color: var(--color-white);
+			border: 1px solid var(--color-mine-shaft);
+			border-radius: 50%;
 
-      font-family: var(--font-family-title);
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 25px;
-      color: var(--color-mine-shaft);
-      text-decoration: none;
+			font-family: var(--font-family-title);
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 25px;
+			color: var(--color-mine-shaft);
+			text-decoration: none;
 
-      transition: background-color 0.3s, color 0.3s;
+			transition: background-color 0.3s, color 0.3s;
 
-      margin: 0 10px 0 0;
+			margin: 0 10px 0 0;
 
-      &:hover:not(.current, .prev, .next) {
-        background-color: var(--color-flame-pea);
+			&:hover:not(.current, .prev, .next) {
+				background-color: var(--color-flame-pea);
 
-        color: var(--color-white);
+				color: var(--color-white);
 
-        transition: background-color 0.3s, color 0.3s;
-      }
+				transition: background-color 0.3s, color 0.3s;
+			}
 
-      @include mixins.respond-to(mobileOnly) {
-        &:not(.prev, .next) {
-          display: none;
-        }
-      }
-    }
+			@include mixins.respond-to(mobileOnly) {
+				&:not(.prev, .next) {
+					display: none;
+				}
+			}
+		}
 
-    & .prev {
-      margin: 0 40px 0 0;
+		& .prev {
+			margin: 0 40px 0 0;
 
-      @include mixins.respond-to(mobileOnly) {
-        margin: 0 0 30px 0;
-      }
-    }
+			@include mixins.respond-to(mobileOnly) {
+				margin: 0 0 30px 0;
+			}
+		}
 
-    & .next {
-      margin: 0 0 0 30px;
+		& .next {
+			margin: 0 0 0 30px;
 
-      @include mixins.respond-to(mobileOnly) {
-        margin: 0;
-      }
-    }
+			@include mixins.respond-to(mobileOnly) {
+				margin: 0;
+			}
+		}
 
-    & .prev,
-    .next {
-      border: none;
-      border-radius: inherit;
+		& .prev,
+		.next {
+			border: none;
+			border-radius: inherit;
 
-      transition: color 0.3s;
+			transition: color 0.3s;
 
-      &:hover {
-        color: var(--color-flame-pea);
-        transition: color 0.3s;
-      }
+			&:hover {
+				color: var(--color-flame-pea);
+				transition: color 0.3s;
+			}
 
-      @include mixins.respond-to(mobileOnly) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+			@include mixins.respond-to(mobileOnly) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 
-        width: 100%;
-        background-color: var(--color-valencia);
+				width: 100%;
+				background-color: var(--color-valencia);
 
-        color: var(--color-white);
+				color: var(--color-white);
 
-        padding: 0 50px 0 50px
-      }
-    }
+				padding: 0 50px 0 50px;
+			}
+		}
 
-    & .current {
-      background-color: var(--color-valencia);
+		& .current {
+			background-color: var(--color-valencia);
 
-      color: var(--color-white);
-    }
-  }
+			color: var(--color-white);
+		}
+	}
 }

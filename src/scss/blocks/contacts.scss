@@ -84,3 +84,10 @@
     }
   }
 }
+
+.warehouses {
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
