@@ -92,7 +92,34 @@
   </div>
 </section>
 
+  <div class="donation-modal" id="payModal">
+    <div class="donation-modal__wrapper">
+      <button class="donation-modal__close base-button" id="payModal_close">
+        <svg class="donation-modal__button-img" width="20" height="20" alt="#">
+          <use href="img/icon/sprite.svg#modal-close-icon"></use>
+        </svg>
+      </button>
+      <div class="donation-modal__inner">
+        <form class="donation-modal__form">
+          <h2 class="donation-modal__title section-title base-title">Форма пожертвования</h2>
+          <input class="donation-modal__input donation-modal__input--name" placeholder="Имя, фамилия" type="text" required>
+          <input class="donation-modal__input donation-modal__input--email" placeholder="Email" type="email">
+          <input class="donation-modal__input donation-modal__input--phone" placeholder="Телефон" type="tel">
+          <input class="donation-modal__textarea" placeholder="Комментарий" type="textarea">
+
+          <button class="donation-modal__submit base-button" type="submit">Отправить</button>
+        </form>
+        <p class="donation-modal__info base-par">
+          Укажите ваши данные. В случае анонимного перевода напишите "Анонимно"<br>
+          <br>
+          Пожертвование в Фонд Захара Прилепина = <span class="pay-price">100</span> руб
+        </p>
+      </div>
+    </div>
+  </div>
+
   <section class="donation-main">
+
     <div class="donation-main__container base-container">
       <div class="donation-main__banks">
         <h2 class="donation-main__banks-title section-title base-title">Мы принимаем</h2>
@@ -123,22 +150,22 @@
         <li class="donation-main__donation-item">
           <span class="donation-main__donation-label">Сделать пожертвование на сумму</span>
           <span class="donation-main__donation-value">100₽</span>
-          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+          <button class="donation-main__donation-button base-button" data-sum="100" data-toggle="modal" data-target="#payModal" type="button">Пожертвовать</button>
         </li>
         <li class="donation-main__donation-item">
           <span class="donation-main__donation-label">Сделать пожертвование на сумму</span>
           <span class="donation-main__donation-value">500₽</span>
-          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+          <button class="donation-main__donation-button base-button" data-sum="500" data-toggle="modal" data-target="#payModal" type="button">Пожертвовать</button>
         </li>
         <li class="donation-main__donation-item">
           <span class="donation-main__donation-label">Сделать пожертвование на сумму</span>
           <span class="donation-main__donation-value">1000₽</span>
-          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+          <button class="donation-main__donation-button base-button" data-sum="1000" data-toggle="modal" data-target="#payModal" type="button">Пожертвовать</button>
         </li>
         <li class="donation-main__donation-item">
           <span class="donation-main__donation-label">Сделать пожертвование на сумму</span>
           <span class="donation-main__donation-value">5000₽</span>
-          <button class="donation-main__donation-button base-button" type="button">Пожертвовать</button>
+          <button class="donation-main__donation-button base-button" data-sum="5000" data-toggle="modal" data-target="#payModal" type="button">Пожертвовать</button>
         </li>
         <li class="donation-main__donation-item">
           <label class="donation-main__donation-label" for="donation_input">Или укажите сумму пожертвования</label>
